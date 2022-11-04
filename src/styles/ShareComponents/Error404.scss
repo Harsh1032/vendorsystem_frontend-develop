@@ -1,0 +1,62 @@
+@import "../variables.scss";
+
+// helper ==============================================
+.flex-cent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bg-cont {
+  background-image: url(../../images/background/MAINBACKGROUND.png);
+  margin: 0 -3rem -2rem -3rem;
+}
+
+.error404 {
+  background: #232a6ec2 0% 0% no-repeat padding-box;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  height: 100vh;
+  margin: 0 -3rem -2rem -3rem;
+  &-display {
+    padding-top: 4rem;
+  }
+  &-num {
+    color: map-get($map: $app-theme, $key: "baseWhite");
+    opacity: 0.3;
+    font-size: 300px;
+  }
+  &-msg {
+    text-align: center;
+    letter-spacing: 0.7px;
+    color: map-get($map: $app-theme, $key: "baseFormal");
+    font-size: 1.5rem;
+    margin-top: 4rem;
+  }
+  &-img {
+    width: 404px;
+    height: auto;
+  }
+}
+
+//Mobile styling ===============================================
+@media only screen and (max-width: 480px) {
+  .error404 {
+    &-display {
+      padding-top: 8rem;
+    }
+    &-msg {
+      font-size: 13px;
+      margin: 2rem;
+      word-wrap: break-word;
+    }
+    &-num {
+      font-size: 120px;
+    }
+    &-img {
+      width: 200px;
+    }
+  }
+  .bg-cont {
+    background-size: cover;
+  }
+}

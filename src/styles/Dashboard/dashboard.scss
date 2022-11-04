@@ -1,0 +1,151 @@
+@import "../variables.scss";
+
+.dashboard-mobile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .subheader-1 {
+    padding: 2rem 0 0.5rem 0;
+    font-size: 22px;
+    color: map-get($map: $app-theme, $key: "baseFormal");
+    letter-spacing: 1.8px;
+  }
+
+  .subheader-2 {
+    padding: 0.5rem 0 2rem 0;
+    font-size: 22px;
+    font-weight: bold;
+    color: map-get($map: $app-theme, $key: "baseWhite");
+    letter-spacing: 0.9px;
+  }
+}
+
+.dashboard-panel {
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+  .access-container {
+    width: 35%;
+    height: 500px;
+    margin: 1rem;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+
+      &:after {
+        display: block;
+        content: "";
+        width: 85%;
+        height: 85%;
+        position: absolute;
+        top: -15px;
+        left: -15px;
+        border-top: 3px solid map-get($map: $app-theme, $key: "tertiaryTangy");
+        border-left: 3px solid map-get($map: $app-theme, $key: "tertiaryTangy");
+        border-radius: 3px;
+      }
+
+      &:before {
+        display: block;
+        content: "";
+        width: 50%;
+        height: 40%;
+        position: absolute;
+        bottom: -15px;
+        right: -15px;
+        border-bottom: 3px solid map-get($map: $app-theme, $key: "tertiaryTangy");
+        border-right: 3px solid map-get($map: $app-theme, $key: "tertiaryTangy");
+        border-radius: 3px;
+      }
+    }
+
+    &.img-orders {
+      background-image: url("../../images/background/dashboard-orders.png");
+    }
+
+    &.img-pricing {
+      background-image: url("../../images/background/dashboard-price.png");
+    }
+
+    .footer-btn {
+      height: 22%;
+      width: 100%;
+      background: map-get($map: $app-theme, $key: "primaryDark");
+      bottom: 0;
+      position: absolute;
+      border-bottom: 2px solid map-get($map: $app-theme, $key: "primaryElectric");
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  }
+
+  .access-container:hover {
+    opacity: 1 !important;
+    z-index: 0;
+  }
+}
+
+@media screen and (min-width: "1181px") and (max-width: "1300px") {
+  .dashboard-panel {
+    .access-container {
+      width: 30%;
+    }
+  }
+}
+
+@media screen and (min-width: "769px") and (max-width: "1180px") {
+  .dashboard-panel {
+    .access-container {
+      width: 45%;
+    }
+  }
+}
+
+@media screen and (min-width: "551px") and (max-width: "768px") {
+  .dashboard-panel {
+    margin-top: unset;
+    margin-bottom: 3rem;
+    .access-container {
+      width: 65%;
+    }
+  }
+}
+
+@media screen and (max-width: "550px") {
+  .dashboard-mobile-header {
+    .subheader-1 {
+      padding: 1.5rem 0 0.5rem 0;
+      font-size: 17px;
+    }
+
+    .subheader-2 {
+      padding: 0.5rem 0 1rem 0;
+      font-size: 17px;
+    }
+  }
+
+  .dashboard-panel {
+    margin-top: unset;
+    margin-bottom: 3rem;
+    .access-container {
+      width: 80%;
+      height: 280px;
+      .footer-btn {
+        .p-button {
+          padding: 3px 7px;
+        }
+      }
+    }
+  }
+}

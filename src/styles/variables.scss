@@ -1,0 +1,82 @@
+$app-theme: (
+  "primary": #032B6B,
+  "primaryLogin": #090641c4,
+  "primaryKlein": #0E289B,
+  "primaryLight": #0A1C6C,
+  "primaryShade": #00d7d325,
+  "primaryHover": #00d7d348,
+  "primaryFaded": #115A98,
+  "primaryTableFilter": #2D3D7E,
+  "primaryTableRowOdd": #19335C,
+  "primaryFadedLight": #31326A,
+  "primaryDark": #000836,
+  "primaryVeryDark": #000018,
+  "primaryButton": #1A76C4,
+  "primaryButtonHover": #298BFB,
+  "primaryElectricDark": #30EEEE,
+  "primaryElectricHover": #00d7d348,
+  "primaryElectric": #03FFFB,
+  "primaryElectricShadow": #36f9f626,
+  "secondaryDark": #09B500,
+  "secondary": #0AD500,
+  "secondaryTechno": #29FB30,
+  "secondaryDynamic": #F8F73B,
+  "secondaryDynamicShade": #6c6c0cb6,
+  "secondaryDynamicDark": #FFC107,
+  "tertiaryLabel": #FD291CB7,
+  "tertiaryBlood": #C40B00,
+  "tertiarySystem": #FD291C,
+  "tertiaryTangy": #FD7A22,
+  "tertiaryTangyFaded": #FA9456,
+  "tertiaryYellow": #FD7A22,
+  "tertiaryTangyShade": #FD7A222B,
+  "baseBoxShadow": #00000029,
+  "baseBoxShadowSec": #00000026,
+  "baseBoxShadowLogin": #000000b1,
+  "baseNight": #070F39,
+  "baseDust": #404040,
+  "baseDimDust": #6A6A6A,
+  "baseLightDust": #6C757D,
+  "baseLightGrey": #8D8A8A,
+  "baseFormal": #C4C4C4,
+  "baseLight": #EFEFEF,
+  "baseLightWhite": #FEFEFE,
+  "baseWhite": #FFFFFF,
+  "baseTransparentWhite": #FFFFFF31,
+  "baseTransparentWhiteLight": #FFFFFF00,
+  "baseBlack": #000000,
+);
+$theme-colors: (
+  "dark": rgb(21, 43, 64),
+  "info": rgb(21, 146, 230),
+  "secondary": #23506f,
+  "active": rgb(42, 100, 139),
+  "grey": #999,
+  "primary": rgb(2, 7, 115),
+  "light": rgb(248, 249, 252),
+  "danger": rgb(242, 69, 29),
+  "tablehighlight": rgb(98, 110, 209),
+);
+$chart-colors: (
+  "green": #54d67b,
+  "red": #cc5545,
+  "yellow": #cfcd61,
+  "blue": #626ed1,
+  "orange": #f6c04d,
+  "darkBlue": #020773,
+  "vividBlue": #0a4fd9,
+  "cyan": #00cbf0,
+);
+
+:export {
+  green: map-get($map: $chart-colors, $key: "green");
+  red: map-get($map: $chart-colors, $key: "red");
+  blue: map-get($map: $chart-colors, $key: "blue");
+  orange: map-get($map: $chart-colors, $key: "orange");
+  darkBlue: map-get($map: $chart-colors, $key: "darkBlue");
+  yellow: map-get($map: $chart-colors, $key: "yellow");
+  vividBlue: map-get($map: $chart-colors, $key: "vividBlue");
+  cyan: map-get($map: $chart-colors, $key: "cyan");
+}
+
+$mb-bp: 480px;

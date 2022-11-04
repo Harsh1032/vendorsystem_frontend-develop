@@ -1,0 +1,118 @@
+@import "../variables.scss";
+
+.custom-filter-dropdown-box {
+  width: 100%;
+  padding: 0.3rem 0.3rem;
+  .p-inputtext {
+    background: map-get($map: $app-theme, $key: "primaryTableFilter") 0% 0% no-repeat padding-box;
+    border: 1px solid map-get($map: $app-theme, $key: "primaryTableFilter");
+    letter-spacing: 2.4px;
+    color: map-get($map: $app-theme, $key: "baseLightWhite");
+
+    &::placeholder {
+      /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: map-get($map: $app-theme, $key: "baseFormal");
+    }
+
+    &:hover,
+    &:focus {
+      border: 1px solid map-get($map: $app-theme, $key: "primaryElectric");
+    }
+  }
+
+  &.p-dropdown {
+    background: map-get($map: $app-theme, $key: "primaryTableFilter") 0% 0% no-repeat padding-box;
+    border: 1px solid map-get($map: $app-theme, $key: "primaryTableFilter");
+
+    .p-inputtext {
+      border: none !important;
+      &:hover,
+      &:focus {
+        border: none;
+      }
+    }
+
+    .p-dropdown-label {
+      &.p-placeholder {
+        color: map-get($map: $app-theme, $key: "baseFormal");
+        text-align: left;
+      }
+    }
+
+    .p-dropdown-trigger {
+      .pi {
+        color: map-get($map: $app-theme, $key: "baseLightWhite");
+      }
+    }
+
+    &:hover,
+    &:focus-within {
+      border: 1px solid map-get($map: $app-theme, $key: "primaryElectric");
+    }
+  }
+}
+
+//DROPDOWN PANEL STYLING
+.custom-filter-dropdown {
+  &.p-dropdown-panel {
+    background: map-get($map: $app-theme, $key: "primaryDark") 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 7px map-get($map: $app-theme, $key: "primaryElectric") !important;
+    .p-dropdown-header {
+      background: map-get($map: $app-theme, $key: "primaryDark") 0% 0% no-repeat padding-box;
+      .p-dropdown-filter-container {
+        .p-inputtext {
+          background: map-get($map: $app-theme, $key: "primaryTableFilter") 0% 0% no-repeat
+            padding-box;
+          border: 1px solid map-get($map: $app-theme, $key: "primaryTableFilter");
+          color: map-get($map: $app-theme, $key: "baseWhite");
+          font-weight: bold;
+          letter-spacing: 1.5px;
+
+          &:hover {
+            border: 1px solid map-get($map: $app-theme, $key: "primaryElectric");
+          }
+        }
+      }
+    }
+
+    .p-dropdown-items-wrapper {
+      .p-dropdown-items {
+        .p-dropdown-item {
+          letter-spacing: 2px;
+          color: map-get($map: $app-theme, $key: "baseLightWhite");
+
+          &.p-highlight,
+          &:hover {
+            background: map-get($map: $app-theme, $key: "primaryButton") 0% 0% no-repeat padding-box !important;
+            color: map-get($map: $app-theme, $key: "baseWhite") !important;
+          }
+          .template-item {
+            padding: 0.2rem 0.2rem;
+          }
+        }
+
+        .p-dropdown-empty-message {
+          color: map-get($map: $app-theme, $key: "baseLightWhite") !important;
+          font-weight: bold;
+          letter-spacing: 1.5px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .custom-filter-dropdown-box {
+    padding: 0;
+  }
+
+  .custom-filter-dropdown {
+    &.p-dropdown-panel .p-dropdown-items-wrapper {
+      .p-dropdown-items .p-dropdown-item {
+        .template-item {
+          padding: 0;
+        }
+      }
+    }
+  }
+}

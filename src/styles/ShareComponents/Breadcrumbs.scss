@@ -1,0 +1,21 @@
+@import "../variables.scss";
+
+.link-order {
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 0 -2rem;
+  padding: 0 2rem;
+
+  .p-button {
+    padding: 0.7rem 0.5rem !important;
+  }
+  .p-button.p-button-link {
+    color: map-get($map: $app-theme, $key: "baseWhite") !important;
+    font-weight: bold;
+    letter-spacing: 0.9px;
+  }
+  .tab-icon {
+    width: 16px;
+    height: 16px;
+    color: map-get($map: $app-theme, $key: "baseWhite");
+  }
+}

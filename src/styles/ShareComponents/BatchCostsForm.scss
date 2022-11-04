@@ -1,0 +1,25 @@
+.costsBatchTableForm {
+    .form-group {
+        margin-bottom: 0px !important;
+    }
+
+    .error {
+        border: 1px solid red !important;
+        border-radius: 5px;
+    }
+
+    .pull-right {
+        float: right;
+    }    
+    
+    .p-datatable-tbody .dropdown .p-inputtext {
+        background: unset;
+        border: unset;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .costsBatchTableForm .p-datatable-tbody > tr > td {
+        display: block;
+    }
+}

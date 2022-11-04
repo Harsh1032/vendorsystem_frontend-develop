@@ -1,0 +1,19 @@
+@import "../variables.scss";
+
+.p-slider {
+  .p-slider-range {
+    background: map-get($map: $app-theme, $key: "secondaryTechno");
+  }
+
+  .p-slider-handle {
+    top: 0rem !important;
+    width: 1.4rem;
+    height: 1.4rem;
+    border: 0.3rem solid map-get($map: $app-theme, $key: "secondaryTechno") !important;
+    background: map-get($map: $app-theme, $key: "primaryDark");
+  }
+}
+
+.p-slider:not(.p-disabled) .p-slider-handle:hover {
+    background: map-get($map: $app-theme, $key: "secondaryTechno") !important;
+}

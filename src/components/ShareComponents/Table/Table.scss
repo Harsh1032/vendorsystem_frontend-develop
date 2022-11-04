@@ -1,0 +1,109 @@
+td {
+    overflow-wrap: anywhere;
+}
+
+.table-tools-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.p-datatable {
+    .p-datatable-header {
+        padding: 1rem;
+        text-align: left;
+        font-size: 1.5rem;
+    }
+    .p-paginator {
+        padding: 1rem;
+    }
+    .p-datatable-thead > tr > th {
+        text-align: left;
+    }
+    .p-datatable-tbody > tr > td {
+        cursor: auto;
+    }
+    .p-dropdown-label:not(.p-placeholder) {
+        text-transform: uppercase;
+    }
+}
+
+/* Responsive */
+.p-datatable-tbody > tr > td .p-column-title {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .p-datatable {
+        .p-datatable-thead > tr > th,
+        .p-datatable-tfoot > tr > td,
+        .single > .p-selection-column {
+            display: none !important;
+        }
+
+        .p-datatable-tbody > tr {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+            word-wrap: break-word;
+            background-color: #fff;
+            background-clip: border-box;
+            border: 1px solid rgba(0, 0, 0, 0.125);
+            border-radius: 0.5rem;
+        }
+
+        .p-selectable-row.single {
+            margin-bottom: 8px;
+            .detailview-indicator {
+                padding: 0px;
+
+                .detailview-button {
+                    width: 100%;
+                    text-align: left;
+                    border-radius: 0 0 0.5rem 0.5rem;
+                }
+            }
+        }
+
+        .p-datatable-tbody {
+            background:#f0f0f0;
+        }
+
+        .p-datatable-tbody > tr {
+            border-bottom: 1px solid var(--surface-d);
+            border: 1px solid rgba(0, 0, 0, 0.125);
+
+            > td {
+                text-align: left !important;
+                display: flex;
+                align-items: center;
+                border: 1 solid !important;
+                width: 100% !important;
+                float: left;
+                clear: left;
+
+                .p-column-title {
+                    padding: .4rem;
+                    width: 50%;
+                    display: inline-block;
+                    margin: -.4rem 1rem -.4rem -.4rem;
+                    font-weight: bold;
+                }
+
+                .p-body-template {
+                    text-align: end;
+                    width: 60%;
+                    display: inline-block;
+                }
+            }
+
+            &.p-rowgroup-footer {
+                > td {
+                    display: inline-flex;
+                    width: auto !important;
+                    float: none;
+                }
+            }
+        }
+    }
+}

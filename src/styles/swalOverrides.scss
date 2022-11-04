@@ -1,0 +1,95 @@
+@import "./variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&display=swap");
+
+.swal-modal {
+  background: map-get($map: $app-theme, $key: "primaryDark") 0% 0% no-repeat padding-box;
+}
+
+.swal-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+}
+
+.swal-title {
+  color: white;
+  letter-spacing: 4.8px;
+  text-align: center;
+  font: normal normal bold "Titillium Web";
+}
+
+.swal-content {
+  .swal-content__input {
+    background: map-get($map: $app-theme, $key: "baseTransparentWhite") 0% 0% no-repeat padding-box;
+    border-radius: 5px;
+    color: map-get($map: $app-theme, $key: "baseWhite");
+
+    &:focus {
+      border-color: map-get($map: $app-theme, $key: "primaryElectric");
+    }
+  }
+}
+
+.swal-text {
+  text-align: center;
+  font: normal normal normal "Titillium Web";
+  font-size: 1.2rem;
+  letter-spacing: 3.6px;
+  color: map-get($map: $app-theme, $key: "baseWhite");
+}
+
+.swal-icon {
+  &--success__line {
+    background-color: map-get($map: $app-theme, $key: "secondaryTechno");
+  }
+  &--success__ring {
+    border-color: map-get($map: $app-theme, $key: "secondaryTechno");
+  }
+  &--success__hide-corners {
+    background: map-get($map: $app-theme, $key: "primaryDark") 0% 0% no-repeat padding-box;
+  }
+}
+
+.swal-button {
+  background: map-get($map: $app-theme, $key: "primaryShade") 0% 0% no-repeat padding-box;
+  box-shadow: 0px 8px 24px map-get($map: $app-theme, $key: "primaryElectricShadow");
+  letter-spacing: 3.2px;
+  color: map-get($map: $app-theme, $key: "baseLight");
+  font-size: 1.2rem;
+  font-weight: 400;
+  padding: 13px 20px;
+  border-radius: 0px;
+  clip-path: polygon(100% 0, 100% 75%, 80% 100%, 0 100%, 0 0);
+  border-bottom: 2px solid map-get($map: $app-theme, $key: "primaryElectric");
+  position: relative;
+
+  &:hover {
+    color: map-get($map: $app-theme, $key: "baseDust");
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    width: 20%;
+    height: 25%;
+    background-color: map-get($map: $app-theme, $key: "primaryElectric");
+    right: 0%;
+    bottom: 0%;
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+  }
+}
+
+.swal-button--cancel:hover {
+  color: black;
+}
+.swal-button--return:hover {
+  color: black;
+}
+
+
+.swal-footer {
+  display: flex;
+  justify-content: center;
+}
+.swal-icon--success:before,
+.swal-icon--success:after {
+  display: none;
+}
